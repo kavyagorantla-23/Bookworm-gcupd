@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .header, .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .book {
+            border: 1px solid #333;
+            margin: 10px;
+            padding: 10px;
+        }
+        @media (max-width: 600px) {
+            .book {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>BookWorm</h1>
+        <label for="search">Search for books:</label>
+        <input type="text" id="search" placeholder="Search for books...">
+    </div>
+    <div class="book">
+        <h2>Book Title</h2>
+        <p>Book Author</p>
+        <p>Book Description</p>
+        <button onclick="alert('Added to cart')">Add to cart</button>
+    </div>
+    <div class="footer">
+        <p>Copyright &copy; 2022 BookWorm</p>
+        <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+    </div>
+    <script>
+        document.getElementById('search').addEventListener('input', function(e) {
+            console.log('Search for', e.target.value);
+        });
+    </script>
+</body>
+</html>
